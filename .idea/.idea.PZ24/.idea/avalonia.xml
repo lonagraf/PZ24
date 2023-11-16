@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="PZ24/App.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Category/CategoryWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/ClientWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Clients/AddClientWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Clients/ClientWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Clients/EditClientWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Employees/AddEmployeeWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Employees/EditEmployeeWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Employees/EmployeeWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/MainWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Marketing/CampaignWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Products/AddProductWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Products/CategoryWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Products/EditProductWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Products/ProductWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Service/ServiceWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Window1.axaml" value="PZ24/PZ24.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

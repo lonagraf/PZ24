@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
+        x:Class="PZ24.MainWindow"
+        Title="Главное окно"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        IsHitTestVisible="True"
+        CanResize="False">
+        
+        <Grid>
+                <Panel Name="MainPanel" Background="Lavender" HorizontalAlignment="Right" Width="840" Height="410" Margin="150 30 10 10">
+                        <Image Source="Icons/deadinside.png" HorizontalAlignment="Right"/>
+                </Panel>
+                <Panel Name="TitleBar" Width="1000" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <Button Name="CloseBtn" HorizontalAlignment="Right" VerticalAlignment="Center" Width="30" Height="30" Background="White" Click="CloseBtn_OnClick">
+                                <StackPanel>
+                                        <Image Source="Icons/cross.png"/>
+                                </StackPanel>
+                        </Button>
+                        <TextBlock Text="CRM" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" FontSize="30" FontWeight="ExtraLight" />
+                </Panel>
+                <Panel Name="Menu" Width="150" Height="420" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                        <Button Name="ClientBtn" Background="White" VerticalAlignment="Top" Margin="0 20 0 0" Width="150" Click="ClientBtn_OnClick" >
+                                <StackPanel Orientation="Horizontal">
+                                        <Image Source="Icons/user-alien.png" Height="20" HorizontalAlignment="Center" Margin="0 0 5 0"/>
+                                        <TextBlock Text="Клиенты" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                                </StackPanel>
+                        </Button>
+                        <Button Name="ProductBtn" Background="White" VerticalAlignment="Top" Margin="0 60 0 0" Width="150" Click="ProductBtn_OnClick">
+                                <StackPanel Orientation="Horizontal">
+                                        <Image Source="\Icons\box-open-full.png" Height="20" HorizontalAlignment="Center" Margin="0 0 5 0"/>
+                                        <TextBlock Text="Продукты" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                                </StackPanel>
+                        </Button>
+                        <Button Name="EmployeeBtn" Background="White" VerticalAlignment="Top" Margin="0 100 0 0" Width="150" Click="EmployeeBtn_OnClick">
+                                <StackPanel Orientation="Horizontal">
+                                        <Image Source="\Icons\user-helmet-safety.png" Height="20" HorizontalAlignment="Center" Margin="0 0 5 0"/>
+                                        <TextBlock Text="Персонал" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                                </StackPanel>
+                        </Button>
+                        <Button Name="ServiceBtn" Background="White" VerticalAlignment="Top" Margin="0 140 0 0" Width="150" Click="ServiceBtn_OnClick">
+                                <StackPanel Orientation="Horizontal">
+                                        <Image Source="\Icons\user-headset.png" Height="20" HorizontalAlignment="Center" Margin="0 0 5 0"/>
+                                        <TextBlock Text="Поддержка" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                                </StackPanel>
+                        </Button>
+                        <Button Name="CampaignBtn" Background="White" VerticalAlignment="Top" Margin="0 180 0 0" Width="150" Click="CampaignBtn_OnClick">
+                                <StackPanel Orientation="Horizontal">
+                                        <Image Source="\Icons\ad.png" Height="20" HorizontalAlignment="Center" Margin="0 0 5 0"/>
+                                        <TextBlock Text="Маркетинг" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                                </StackPanel>
+                        </Button>
+                        <Button Name="ExitBtn" Background="White" VerticalAlignment="Bottom" Margin="0 0 0 10" Width="150">
+                                <StackPanel Orientation="Horizontal">
+                                        <Image Source="\Icons\portal-exit.png" Height="20" HorizontalAlignment="Center" Margin="0 0 5 0"/>
+                                        <TextBlock Text="Выход" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                                </StackPanel>
+                        </Button>
+                </Panel>
+        </Grid>
+        
+</Window>

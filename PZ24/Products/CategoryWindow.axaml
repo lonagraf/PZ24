@@ -1,0 +1,30 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="300"
+        x:Class="PZ24.Products.CategoryWindow"
+        Title="CategoryWindow">
+    <Grid>
+        <Button Name="AddBtn" Background="Lavender" VerticalAlignment="Top" Margin="40 50 0 0" Click="AddBtn_OnClick">
+            <StackPanel>
+                <Image Source="\Icons\square-plus.png" Height="20" Width="20"/>
+            </StackPanel>
+        </Button>
+        <Button Name="DeleteBtn" Background="Lavender" VerticalAlignment="Top" Margin="75 50 0 0" Click="DeleteBtn_OnClick">
+            <StackPanel>
+                <Image Source="\Icons\square-minus.png" Height="20" Width="20"/>
+            </StackPanel>
+        </Button>
+        <StackPanel VerticalAlignment="Bottom">
+            <TextBlock Text="Название" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+            <TextBox Name="NameTxt" Width="150" Margin="0 0 0 10" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <DataGrid Name="CategoryGrid" x:CompileBindings="False" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="LightSteelBlue" BorderThickness="5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding CategoryID}"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

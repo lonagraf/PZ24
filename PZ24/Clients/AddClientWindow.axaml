@@ -1,0 +1,21 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        x:Class="PZ24.Clients.AddClientWindow"
+        Title="AddClientWindow">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Имя" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <TextBox Name="NameTxt" Width="150"/>
+        <TextBlock Text="Фамилия" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <TextBox Name="SurnameTxt"></TextBox>
+        <TextBlock Text="Номер телефона" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <TextBox Name="PhoneTxt"></TextBox>
+        <TextBlock Text="Почта" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <TextBox Name="EmailTxt"></TextBox>
+        <TextBlock Text="Статус клиента" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <ComboBox Name="StatusCmb" Width="150"></ComboBox>
+        <Button Name="AddBtn" Content="Добавить" HorizontalAlignment="Center" Margin="0 5 0 0" Background="Lavender"  Click="AddBtn_OnClick"/>
+    </StackPanel>
+</Window>

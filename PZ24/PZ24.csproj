@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.0.2"/>
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.2"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.2"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.2"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.2"/>
+        <PackageReference Include="MessageBox.Avalonia" Version="3.1.3" />
+        <PackageReference Include="MySql.Data" Version="8.2.0" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Folder Include="Icons\" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <None Remove="Icons\cross.png" />
+      <AvaloniaResource Include="Icons\cross.png" />
+      <None Remove="Icons\menu-burger.png" />
+      <None Remove="Icons\user.png" />
+      <None Remove="Icons\user-alien.png" />
+      <AvaloniaResource Include="Icons\user-alien.png" />
+      <None Remove="Icons\pen-square.png" />
+      <AvaloniaResource Include="Icons\pen-square.png" />
+      <None Remove="Icons\square-minus.png" />
+      <AvaloniaResource Include="Icons\square-minus.png" />
+      <None Remove="Icons\square-plus.png" />
+      <AvaloniaResource Include="Icons\square-plus.png" />
+      <None Remove="Icons\pngwing.com.png" />
+      <AvaloniaResource Include="Icons\pngwing.com.png" />
+      <None Remove="Icons\deadinside.png" />
+      <AvaloniaResource Include="Icons\deadinside.png" />
+      <None Remove="Icons\box-open-full.png" />
+      <AvaloniaResource Include="Icons\box-open-full.png" />
+      <None Remove="Icons\user-helmet-safety.png" />
+      <AvaloniaResource Include="Icons\user-helmet-safety.png" />
+      <None Remove="Icons\user-headset.png" />
+      <AvaloniaResource Include="Icons\user-headset.png" />
+      <None Remove="Icons\ad.png" />
+      <AvaloniaResource Include="Icons\ad.png" />
+      <None Remove="Icons\portal-exit.png" />
+      <AvaloniaResource Include="Icons\portal-exit.png" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="Clients\ClientWindow.axaml.cs">
+        <DependentUpon>ClientWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Products\CategoryWindow.axaml.cs">
+        <DependentUpon>CategoryWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+</Project>
