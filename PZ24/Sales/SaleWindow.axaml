@@ -2,9 +2,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="840" d:DesignHeight="410"
              x:Class="PZ24.Sales.SaleWindow">
     <Grid>
+        <Button Name="AddBtn" Background="Lavender" VerticalAlignment="Top" Margin="165 0 0 0" Click="AddBtn_OnClick" >
+            <StackPanel>
+                <Image Source="\Icons\square-plus.png" Height="20" Width="20"/>
+            </StackPanel>
+        </Button>
+        <Button Name="DeleteBtn" Background="Lavender" VerticalAlignment="Top" Margin="200 0 0 0" Click="DeleteBtn_OnClick">
+            <StackPanel>
+                <Image Source="\Icons\square-minus.png" Height="20" Width="20"/>
+            </StackPanel>
+        </Button>
         <DataGrid Name="SaleGrid" x:CompileBindings="False" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="LightSteelBlue" BorderThickness="5" Margin="0 30 0 0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"  Binding="{Binding SaleID}"/>

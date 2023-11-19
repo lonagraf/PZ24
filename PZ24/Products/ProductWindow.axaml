@@ -3,7 +3,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="840" d:DesignHeight="410"
-             x:Class="PZ24.Products.ProductWindow">
+             x:Class="PZ24.Products.ProductWindow"
+             >
     <Grid>
         <Button Name="AddBtn" Background="Lavender" VerticalAlignment="Top" Margin="90 0 0 0" Click="AddBtn_OnClick">
             <StackPanel>
@@ -22,6 +23,7 @@
         </Button>
         <Button Name="CategoryBtn" Content="Категории" Background="Lavender" VerticalAlignment="Top" Margin="195 0 0 0" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold" Click="CategoryBtn_OnClick"></Button>
         <ComboBox Name="CategoryCmb" VerticalAlignment="Top" Height="30" Width="150" Margin="300 0 0 0" SelectionChanged="CategoryCmb_OnSelectionChanged"/>
+        <!--<TextBlock Text="Корзина" HorizontalAlignment="Center" FontWeight="DemiBold" FontSize="20"/>-->
         <DataGrid Name="ProductGrid" x:CompileBindings="False" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="LightSteelBlue" BorderThickness="5" Margin="0 30 0 0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ProductID}"/>

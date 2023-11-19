@@ -20,6 +20,7 @@
                 <Image Source="\Icons\pen-square.png" Height="20" Width="20"/>
             </StackPanel>
         </Button>
+        <ComboBox Name="StatusCmb" VerticalAlignment="Top" Height="30" Width="150" Margin="200 0 0 0" SelectionChanged="StatusCmb_OnSelectionChanged"></ComboBox>
         <DataGrid Name="ClientGrid" x:CompileBindings="False" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="LightSteelBlue" BorderThickness="5" Margin="0 30 0 0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"  Binding="{Binding ClientID}"/>

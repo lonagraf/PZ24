@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
@@ -7,6 +9,7 @@ using Avalonia.Markup.Xaml;
 using MsBox.Avalonia;
 using MsBox.Avalonia.Enums;
 using MySql.Data.MySqlClient;
+using PZ24.Sales;
 
 namespace PZ24.Products;
 
@@ -142,4 +145,5 @@ public partial class ProductWindow : UserControl
         var filteredProducts = _products.Where(x => x.Category == currentCategory.Name).ToList();
         ProductGrid.ItemsSource = filteredProducts;
     }
+    
 }

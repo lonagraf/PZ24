@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -14,6 +15,7 @@ public partial class ClientWindow : UserControl
 {
     private Database _database = new Database();
     private List<Client> _clients = new List<Client>();
+    private List<Status> _status = new List<Status>();
 
     private string _fullTable = "select client_id, firstname, surname, phone_number, email, status_name from client " +
                                 "join crm.client_status cs on cs.client_status_id = client.client_status " +
@@ -22,6 +24,7 @@ public partial class ClientWindow : UserControl
     {
         InitializeComponent();
         ShowTable(_fullTable);
+        LoadDataStatusCmb();
     }
 
     public void ShowTable(string sql)
@@ -105,5 +108,33 @@ public partial class ClientWindow : UserControl
             var result = box.ShowAsync();
         }
         
+    }
+
+    private void LoadDataStatusCmb()
+    {
+        _database.openConnection();
+        string sql = "select status_name from client_status";
+        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
+        MySqlDataReader reader = command.ExecuteReader();
+        while (reader.Read())
+        {
+            var currentStatus = new Status()
+            {
+                StatusName = reader.GetString("status_name")
+            };
+            _status.Add(currentStatus);
+        }
+        _database.closeConnection();
+        var statusCmb = this.Find<ComboBox>("StatusCmb");
+        statusCmb.ItemsSource = _status;
+    }
+
+
+    private void StatusCmb_OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
+    {
+        var statusCmb = (ComboBox)sender;
+        var currentStatus = statusCmb.SelectedItem as Status;
+        var filteredClients = _clients.Where(x => x.Status == currentStatus.StatusName).ToList();
+        ClientGrid.ItemsSource = filteredClients;
     }
 }

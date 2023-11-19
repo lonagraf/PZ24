@@ -1,0 +1,19 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        x:Class="PZ24.Sales.AddSaleWindow"
+        Title="AddSaleWindow">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Дата покупки" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <TextBox Name="DateTxt" Width="150"/>
+        <TextBlock Text="Продукт" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <ComboBox Name="ProductCmb" Width="150"/>
+        <TextBlock Text="Стоимость" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <TextBox Name="CostTxt" Width="150"/>
+        <TextBlock Text="Клиент" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+        <ComboBox Name="ClientCmb" Width="150"/>
+        <Button Name="AddBtn" Content="Добавить" HorizontalAlignment="Center" FontWeight="DemiBold" Background="Lavender" Margin="0 5 0 0" Click="AddBtn_OnClick"/>
+    </StackPanel>
+</Window>

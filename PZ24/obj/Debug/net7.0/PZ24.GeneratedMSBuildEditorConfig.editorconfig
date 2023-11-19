@@ -54,6 +54,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/lonah/RiderProjects/PZ24/PZ24/Products/ProductWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/lonah/RiderProjects/PZ24/PZ24/Sales/AddSaleWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/lonah/RiderProjects/PZ24/PZ24/Sales/SaleWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
