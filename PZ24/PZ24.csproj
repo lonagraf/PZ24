@@ -54,6 +54,8 @@
       <AvaloniaResource Include="Icons\ad.png" />
       <None Remove="Icons\portal-exit.png" />
       <AvaloniaResource Include="Icons\portal-exit.png" />
+      <None Remove="Icons\basket-shopping-simple.png" />
+      <AvaloniaResource Include="Icons\basket-shopping-simple.png" />
     </ItemGroup>
 
 

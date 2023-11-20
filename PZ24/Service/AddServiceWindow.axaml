@@ -1,0 +1,23 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        x:Class="PZ24.Service.AddServiceWindow"
+        Title="AddServiceWindow">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Дата обращения" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+        <TextBox Name="DateTxt" Width="150"/>
+        <TextBlock Text="Тип обращения" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+        <ComboBox Name="TypeCmb" Width="150"/>
+        <TextBlock Text="Статус обращения" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+        <ComboBox Name="StatusCmb" Width="150"/>
+        <TextBlock Text="Описание" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+        <TextBox Name="DescTxt" Width="150"/>
+        <TextBlock Text="Клиент" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+        <ComboBox Name="ClientCmb" Width="150"/>
+        <TextBlock Text="Сотрудник" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+        <ComboBox Name="EmployeeCmb" Width="150"/>
+        <Button Name="AddBtn" Content="Добавить" Background="Lavender" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0 5 0 0 " Click="AddBtn_OnClick"/>
+    </StackPanel>
+</Window>

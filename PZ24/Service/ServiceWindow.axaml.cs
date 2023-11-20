@@ -2,7 +2,10 @@
 using System.Data;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Enums;
 using MySql.Data.MySqlClient;
 using PZ24.Employees;
 
@@ -47,5 +50,66 @@ public partial class ServiceWindow : UserControl
         }
         _database.closeConnection();
         ServiceGrid.ItemsSource = _services;
+    }
+
+    private void AddClientBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        AddServiceWindow addServiceWindow = new AddServiceWindow();
+        addServiceWindow.Show();
+    }
+
+    private void Delete(int id)
+    {
+        _database.openConnection();
+        string sql = "delete from client_service where client_service_id = @id";
+        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
+        command.Parameters.AddWithValue("@id", id);
+        command.ExecuteNonQuery();
+        _database.closeConnection();
+    }
+
+    private async void DeleteClientBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Service selectedService = ServiceGrid.SelectedItem as Service;
+
+        if (selectedService != null)
+        {
+            var warning = MessageBoxManager.GetMessageBoxStandard("Предупреждение", "Вы уверены что хотите удалить?", ButtonEnum.YesNo);
+            var result = await warning.ShowAsync();
+            if (result == ButtonResult.Yes)
+            {
+                Delete(selectedService.ServiceID);
+                ShowTable(_fullTable);
+                var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Yспешно удален!", ButtonEnum.Ok);
+                var successResult = box.ShowAsync();
+            }
+            else
+            {
+                var cancelBox = MessageBoxManager.GetMessageBoxStandard("Отмена", "Операция удаления отменена", ButtonEnum.Ok);
+                var cancelResult = cancelBox.ShowAsync();
+            }
+        }
+        else
+        {
+            var box = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Выберите для удаления", ButtonEnum.Ok);
+            var result = box.ShowAsync();
+        }
+    }
+
+    private void EditClientBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Service selectedService = ServiceGrid.SelectedItem as Service;
+
+        if (selectedService != null)
+        {
+            EditServiceWindow editServiceWindow = new EditServiceWindow(selectedService);
+            editServiceWindow.Show();
+            ShowTable(_fullTable);
+        }
+        else
+        {
+            var box = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Выберите для редактирования", ButtonEnum.Ok);
+            var result = box.ShowAsync();
+        }
     }
 }

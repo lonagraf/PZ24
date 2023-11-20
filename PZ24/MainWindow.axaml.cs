@@ -4,6 +4,7 @@ using Avalonia.Interactivity;
 using PZ24.Employees;
 using PZ24.Marketing;
 using PZ24.Products;
+using PZ24.Sales;
 using PZ24.Service;
 
 namespace PZ24;
@@ -55,5 +56,17 @@ public partial class MainWindow : Window
         MainPanel.Children.Clear();
         CampaignWindow campaignWindow = new CampaignWindow();
         MainPanel.Children.Add(campaignWindow);
+    }
+
+    private void SaleBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        MainPanel.Children.Clear();
+        SaleWindow saleWindow = new SaleWindow();
+        MainPanel.Children.Add(saleWindow);
+    }
+
+    private void ExitBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        this.Close();
     }
 }

@@ -18,6 +18,9 @@
         <entry key="PZ24/Products/CategoryWindow.axaml" value="PZ24/PZ24.csproj" />
         <entry key="PZ24/Products/EditProductWindow.axaml" value="PZ24/PZ24.csproj" />
         <entry key="PZ24/Products/ProductWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Sales/SaleWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Service/AddServiceWindow.axaml" value="PZ24/PZ24.csproj" />
+        <entry key="PZ24/Service/EditServiceWindow.axaml" value="PZ24/PZ24.csproj" />
         <entry key="PZ24/Service/ServiceWindow.axaml" value="PZ24/PZ24.csproj" />
         <entry key="PZ24/Window1.axaml" value="PZ24/PZ24.csproj" />
       </map>

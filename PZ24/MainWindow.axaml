@@ -54,7 +54,13 @@
                                         <TextBlock Text="Маркетинг" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
                                 </StackPanel>
                         </Button>
-                        <Button Name="ExitBtn" Background="White" VerticalAlignment="Bottom" Margin="0 0 0 10" Width="150">
+                        <Button Name="SaleBtn" Background="White" VerticalAlignment="Top" Margin="0 220 0 0" Width="150" Click="SaleBtn_OnClick">
+                                <StackPanel Orientation="Horizontal">
+                                        <Image Source="\Icons\basket-shopping-simple.png" Height="20" HorizontalAlignment="Center" Margin="0 0 5 0"/>
+                                        <TextBlock Text="Продажи" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                                </StackPanel>
+                        </Button>
+                        <Button Name="ExitBtn" Background="White" VerticalAlignment="Bottom" Margin="0 0 0 10" Width="150" Click="ExitBtn_OnClick">
                                 <StackPanel Orientation="Horizontal">
                                         <Image Source="\Icons\portal-exit.png" Height="20" HorizontalAlignment="Center" Margin="0 0 5 0"/>
                                         <TextBlock Text="Выход" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
